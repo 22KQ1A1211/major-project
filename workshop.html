@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Haven Workshops</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<style>
+   body {
+    font-family: Arial, sans-serif;
+}
+
+.hero-section {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section .container {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.section h2 {
+    margin-bottom: 40px;
+}
+
+#about p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+ 
+</style>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Safe Haven</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#workshops">Workshops</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#videos">Videos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container text-center text-white">
+            <h1>Welcome to Safe Haven</h1>
+            <p>Your Resource for Crime Prevention Workshops</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container mt-5">
+        <h2 class="text-center">About Safe Haven</h2>
+        <p class="mt-4">Safe Haven is dedicated to empowering individuals and communities through comprehensive crime prevention workshops. Our mission is to educate and equip people with the skills and knowledge needed to protect themselves and others from crime. We offer a variety of workshops that cater to different needs, ensuring that everyone has the opportunity to learn and grow in a safe environment.</p>
+    </section>
+
+    <!-- Workshops Section -->
+    <section id="workshops" class="container mt-5">
+        <h2 class="text-center">Our Workshops</h2>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <img src="SelfDefensiveWorkShop.jpg" class="card-img-top" alt="Basic Self-Defense Workshop">
+                    <div class="card-body">
+                        <h5 class="card-title">Basic Self-Defense</h5>
+                        <p class="card-text">This workshop covers the essential techniques and strategies for personal protection. Perfect for beginners looking to gain confidence and basic self-defense skills.</p>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <img src="crimePrevention-Workshop.jpg" class="card-img-top" alt="Women's Safety Workshop">
+                    <div class="card-body">
+                        <h5 class="card-title">Women's Safety</h5>
+                        <p class="card-text">Focused on empowering women, this workshop teaches practical self-defense techniques and provides tips on staying safe in various situations.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <img src="advance-WorkShop .jpg" class="card-img-top" alt="Advanced Crime Prevention Techniques">
+                    <div class="card-body">
+                        <h5 class="card-title">Advanced Crime Prevention</h5>
+                        <p class="card-text">Designed for those with basic knowledge, this workshop delves into advanced techniques and strategies for preventing and responding to crime effectively.</p>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <img src="Community-Workshop.jpg" class="card-img-top" alt="Community Safety Initiatives">
+                    <div class="card-body">
+                        <h5 class="card-title">Community Safety Initiatives</h5>
+                        <p class="card-text">Learn how to organize and participate in community efforts to enhance safety and reduce crime. This workshop is ideal for community leaders and active citizens.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="container mt-5">
+        <h2 class="text-center">Watch Our Workshops</h2>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4c3lMI01ndc" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KE5YwN4NW5o" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container mt-5 mb-5">
+        <h2 class="text-center">Contact Us</h2>
+        <div class="row mt-4">
+            <div class="col-md-6 offset-md-3">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

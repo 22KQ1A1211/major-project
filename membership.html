@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Prevention Hub Membership Form</title>
+    <style>
+        /* Basic CSS styling for form */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-size: cover;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color:transparent;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"], input[type="email"], textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin: 6px 0;
+            border: 1px solid greenyellow;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 50%;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        h2 {
+            color:palevioletred;
+        }
+        h3 {
+            color:pink;
+        }
+        p {
+            color:salmon;
+        }
+        body {
+            background-image: url("membership-bg.webp");
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>SAFE HEAVEN MEMBERSHIP</h2><center>
+    <p>The Crime Prevention Hub</p></center>
+    <form action="submit_membership.php" method="POST">
+        <label for="fullname"><h3>Full Name</h3></label>
+        <input type="text" id="fullname" name="fullname" required>
+
+        <label for="email"><h3>Email</h3></label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone"><h3>Phone Number</h3></label>
+        <input type="text" id="phone" name="phone" required>
+
+        <label for="address"><h3>Address</h3></label>
+        <textarea id="address" name="address" required></textarea>
+
+        <label for="interests"><h3>Interests</h3></label>
+        <select id="interests" name="interests">
+            <option value="crime_prevention">Crime Prevention</option>
+            <option value="community_outreach">Community Outreach</option>
+            <option value="education">Education and Training</option>
+            <option value="other">Other</option>
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+    <form action="website.html">
+        <input type="submit" value="Skip">
+    </form>
+</div>
+</body>
+</html>

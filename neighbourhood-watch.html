@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Neighborhood Watch</title>
+</head>
+<body>
+    <center>
+    <header>
+        <h1>Neighborhood Watch</h1>
+    </header>
+    <div id="content">
+        <h2>Groups</h2>
+        <div id="group-list">
+            <!-- Group list will be populated here -->
+        </div>
+        <input type="text" id="group-name" placeholder="New Group Name"><br>
+        <button onclick="addGroup()">Add Group</button>
+        <h2>Events</h2>
+        <div id="event-list">
+            <!-- Event list will be populated here -->
+        </div>
+        <input type="text" id="event-name" placeholder="New Event Name"><br>
+        <input type="date" id="event-date"><br>
+        <button onclick="addEvent()">Add Event</button>
+    </div>
+    
+    <script>
+        const groups = [];
+        const events = [];
+
+        function addGroup() {
+            const groupName = document.getElementById('group-name').value;
+            if (groupName) {
+                groups.push(groupName);
+                document.getElementById('group-name').value = '';
+                updateGroupList();
+            }
+        }
+
+        function updateGroupList() {
+            const groupList = document.getElementById('group-list');
+            groupList.innerHTML = '';
+            groups.forEach((group, index) => {
+                const groupItem = document.createElement('div');
+                groupItem.className = 'item';
+                groupItem.textContent = group;
+                groupItem.appendChild(createDeleteButton(() => deleteGroup(index)));
+                groupList.appendChild(groupItem);
+            });
+        }
+        function addEvent() {
+            const eventName = document.getElementById('event-name').value;
+            const eventDate = document.getElementById('event-date').value;
+            if (eventName && eventDate) {
+                events.push({ name: eventName, date: eventDate });
+                document.getElementById('event-name').value = '';
+                document.getElementById('event-date').value = '';
+                updateEventList();
+            }
+        }
+
+        function updateEventList() {
+            const eventList = document.getElementById('event-list');
+            eventList.innerHTML = '';
+            events.forEach((event, index) => {
+                const eventItem = document.createElement('div');
+                eventItem.className = 'item';
+                eventItem.textContent = ${event.name} (on ${event.date});
+                eventItem.appendChild(createDeleteButton(() => deleteEvent(index)));
+                eventList.appendChild(eventItem);
+            });
+        }
+
+function deleteEvent(index) {
+    events.splice(index, 1);
+    updateEventList();
+}
+
+function createDeleteButton(onClick) {
+    const button = document.createElement('button');
+    button.textContent = 'Delete';
+    button.onclick = onClick;
+    return button;
+}
+</script>
+    </center>
+</body>
+</html>
+
+
+
+
+

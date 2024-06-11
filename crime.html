@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Data Visualization and Predictive Analytics</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("crime-3198312_1280.jpg");
+            background-color: transparent;
+        }
+        header {
+            color: black;
+            padding: 1em 0;
+            text-align: center;
+        }
+        
+        #content {
+            padding: 2em;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: transparent;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 1em;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5em;
+        }
+        .form-group input {
+            width: 30%;
+            padding: 0.5em;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.75em;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        canvas {
+            max-width: 100%;
+            margin: 1em 0;
+        }
+        h1 {
+            color:azure;
+        }
+        h2 {
+            color:whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Crime Data Visualization and Predictive Analytics</h1>
+    </header>
+    <div id="content">
+        <script>
+        function validation () {
+            if(crime-type=="null" || crime-type==" ") {
+                alert("crime-type can't be blank")
+                return false;
+            }
+            else if(Crime-lacation=="null" || crime-location==" ") {
+                alert("crime-location can't be blank")
+                return false;
+            }
+            else if(crome-date=="null" || crime-date==" "){
+                alert("crime-date can't be blank")
+                return false;
+            }
+            return true;
+        }
+        </script>
+        <center>
+       <!-- <h2>Crime Data Visualization</h2> -->
+        <h2>CRIME DATA VISUALIZATION</h2>
+        <div class="form-group">
+            <label for="crime-type">Crime Type</label>
+            <input type="text" id="crime-type" placeholder="Enter crime type">
+        </div>
+        <div class="form-group">
+            <label for="crime-location">Location</label>
+            <input type="text" id="crime-location" placeholder="Enter location">
+        </div>
+        <div class="form-group">
+            <label for="crime-date">Date</label>
+            <input type="date" id="crime-date">
+        </div>
+        <form action="C:\Users\varsh\OneDrive\Desktop\UI_Dvelopment\Major_Project\pridictive-analysis.html">
+        <button onclick="predictCrime()">Predict</button></form>
+       <!--- <h3>Prediction Result</h3>
+        <p id="prediction-result">No prediction yet.</p>-->
+        </center>
+    </div>
+    <script>
+        const ctx = document.getElementById('crimeChart').getContext('2d');
+        const crimeChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'Number of Crimes',
+                    data: [65, 59, 80, 81, 56, 55, 40],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        
+        function predictCrime() {
+            const crimeType = document.getElementById('crime-type').value;
+            const location = document.getElementById('crime-location').value;
+            const date = document.getElementById('crime-date').value;
+
+            // Simulating predictive analytics
+          //  const prediction = Predicted increase in ${crimeType} at ${location} on ${date}.;
+        }
+    </script>
+</body>
+</html>
+
+
+
+

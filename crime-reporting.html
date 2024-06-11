@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Reporting</title>
+</head>
+<style>
+    h1 {
+        color:goldenrod;
+    }
+    h2 {
+        color:gold;
+    }
+    h3 {
+        color:yellow;
+    }
+</style>
+<body background="C:\Users\varsh\OneDrive\Desktop\UI_Dvelopment\IMAGES\police-officers-2556094_1280.jpg">
+</body>
+<body>
+    <header>
+        <center>
+        <h1>Crime Reporting</h1>
+        </center>
+    </header>
+    <div id="content">
+        <h2>Report a Crime</h2>
+        <h3>
+        <form id="crime-report-form">
+            <div class="form-group">
+                <label for="crime-type">Type of Crime</label>
+                <select id="crime-type" name="crime-type" required>
+                    <option value="">Select a crime</option>
+                    <option value="theft">Theft</option>
+                    <option value="assault">Assault</option>
+                    <option value="vandalism">Vandalism</option>
+                    <option value="fraud">Fraud</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="crime-date">Date of Crime</label>
+                <input type="date" id="crime-date" name="crime-date" required>
+            </div>
+            <div class="form-group">
+                <label for="crime-location">Location of Crime</label>
+                <input type="text" id="crime-location" name="crime-location" required>
+            </div>
+            <div class="form-group">
+                <label for="crime-description">Description of Crime</label>
+                <textarea id="crime-description" name="crime-description" rows="1" required></textarea>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="anonymous" name="anonymous">
+                <label for="anonymous">Report Anonymously</label>
+            </div>
+            <div id="personal-info">
+                <div class="form-group">
+                    <label for="reporter-name">Your Name</label>
+                    <input type="text" id="reporter-name" name="reporter-name">
+                </div>
+                <div class="form-group">
+                    <label for="reporter-contact">Your Contact Information</label>
+                    <input type="text" id="reporter-contact" name="reporter-contact">
+                </div>
+            </div>
+            <button type="submit">Submit Report</button>
+        </form>
+        </h3>
+    </div>
+    <script>
+        document.getElementById('anonymous').addEventListener('change', function() {
+            const personalInfo = document.getElementById('personal-info');
+            if (this.checked) {
+                personalInfo.style.display = 'none';
+            } else {
+                personalInfo.style.display = 'block';
+            }
+        });
+        document.getElementById('crime-report-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            const report = {};
+            formData.forEach((value, key) => {
+                report[key] = value;
+            });
+            console.log('Report Submitted:', report);
+            alert('Your report has been submitted. Thank you!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
+
+            
+
+
+
+
